@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="gameContainer">
+        <h1>RPS</h1>
+
+         <div class="game-info">
+            <div class="status" id="game-status">Fifi's turn</div>
+         </div>
+
+         <div class="gameboard" id="gameBoard">
+            <button onclick="play('rock')">🪨</button>
+            <button onclick="play('paper')">📃</button>
+            <button onclick="play('scissors')">✂️</button>
+         </div>
+
+         <div class="game-results">
+            <div id="user-choice"></div>
+            <div id="bot-choice"></div>
+            <div id="outcome"></div>
+        </div>
+
+            <div class="score-board">
+                <div class="score">
+                    <div class="score-label">Fifi</div>
+                    <div class="score-value score fifi" id="ScoreFifi">0</div>
+                </div>
+                <div class="score">
+                    <div class="score-label">Draw</div>
+                    <div class="score-value score draw" id="ScoreDraw">0</div>
+                </div>
+                <div class="score">
+                    <div class="score-label">Bot</div>
+                    <div class="score-value score bot" id="ScoreBot">0</div>
+                </div>
+            </div>
+         </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

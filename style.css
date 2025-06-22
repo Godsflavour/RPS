@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', serif;
+    background: #ffc0cb;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container{
+    background: #f7f1f1b3;
+    backdrop-filter: blur(30px);
+    max-width: 500px;
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px #8c1f9c1a;
+}
+
+.h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #0000001a;
+    font-size: 1.6rem;
+}
+
+.game-info {
+        margin-bottom: 10px;
+}
+
+.status {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    min-height: 20px;
+}
+
+.current-player {
+    color: #f77cc4;
+}
+
+.winner {
+    color: rgb(68, 226, 116);
+}
+
+.draw {
+    color: #ffc107;
+}
+
+.gameboard {
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 13px;
+    margin: 15px 0;
+    background: rgba(248, 249, 250, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #f0f8ff;
+}
+
+.item {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-label {
+    margin-left: 80px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(248, 249, 250, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.score {
+    text-align: center;
+}
+
+.score-label {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.score-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.score-fifi {
+    color: #dc3545;
+}
+
+.score-bot {
+    color: #f495e1cc;
+}
+
+.score-draw {
+    color: #ffc107;
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .item {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+
+    .game-board {
+        padding: 10px;
+        grid-gap: 8px;
+    }
+}
+
+.button {
+    margin: 30px;
+    padding: 40px;
+    cursor: pointer;
+    font-size: medium;
+    
+}
