@@ -1,6 +1,6 @@
 let botScore = 0;
 let fifiScore = 0;
-let draw = 0;
+let drawScore = 0;
 
 function play(userChoice) {
     const choices = ['rock', 'paper', 'scissors'];
@@ -9,21 +9,24 @@ function play(userChoice) {
    document.getElementById('user-choice').textContent = `Fifi: ${emoji(userChoice)}`;
    document.getElementById('bot-choice').textContent = `Bot: ${emoji(botChoice)}`;
 
-   const result = getresult(userchoice, botchoice);
-   document.getElementById('outcome').textContent = result;
+   const result = getresult(userChoice, botChoice);
+   document.getElementById('result').textContent = result;
 
    if (result === "Fifi Wins!") {
-    fifiScore;
+    fifiScore++;
    } else if(result === "Fifi lost!") {
-    botScore;
+    botScore++;
    } else {
-    draw;
+    drawScore++;
    }
+
+   updateScores();
+   updateGameStatus(result);
 }
 
 function getresult(user, bot) {
     if (user === bot) 
-        return "It is a draw!";
+        return "It's a draw!";
     if (
         (user === 'rock' && bot === 'scissors') ||
         (user === 'scissors' && bot === 'paper') ||
@@ -49,13 +52,13 @@ function updateScores() {
  function updateGameStatus(result) {
     let status = document.getElementById('game-status');
 
-    if (result == "Fifi Wins!") {
+    if (result === "Fifi Wins!") {
         status.innerText = "You won this round!";
     }
-    if (result == "Fifi lost!") {
+    if (result === "Fifi lost!") {
         status.innerText = "Bot won this round!";
     }
-    if (result == "It's a draw!") {
+    if (result === "It's a draw!") {
         status.innerText = "It's a draw!";
     }
 }
@@ -67,7 +70,7 @@ function resetGame() {
     updateScores();
     document.getElementById('user-choice').textContent = 'Fifi';
     document.getElementById('bot-choice').textContent = 'Bot';
-    document.getElementById('outcome').textContent = '';
+    document.getElementById('result').textContent = '';
     document.getElementById('game-status').textContent = "Fifi's turn";
 }
 
